@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dev\\E-Commerce\\EC.UI\\EC.UI\\EC.UI.csproj",
+      "projectUniqueName": "D:\\Dev\\GitHub\\E_Commerce\\EC.UI\\EC.UI\\EC.UI.csproj",
       "projectName": "EC.UI",
-      "projectPath": "D:\\Dev\\E-Commerce\\EC.UI\\EC.UI\\EC.UI.csproj",
+      "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.UI\\EC.UI\\EC.UI.csproj",
       "packagesPath": "C:\\Users\\rinng\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\E-Commerce\\EC.UI\\EC.UI\\obj\\",
+      "outputPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.UI\\EC.UI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rinng\\AppData\\Roaming\\NuGet\\NuGet.Config",

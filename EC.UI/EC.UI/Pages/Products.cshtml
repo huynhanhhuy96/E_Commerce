@@ -43,12 +43,65 @@
         <div class="card mt-3">
             <div class="card-body">
                 <h5 class="card-title">Media</h5>
+                <!-- Inputfiles Media -->
+                <div class="file-drop-area">
+                    <div class="file-drop-icon ci-cloud-upload"></div>
+                    <span class="file-drop-message">Drag and drop here to upload</span>
+                    <input type="file" class="file-drop-input">
+                    <button type="button" class="file-drop-btn btn btn-primary btn-sm">Or select file</button>
+                </div>
             </div>
         </div>
         <!-- Card Pricing -->
         <div class="card mt-3">
             <div class="card-body">
                 <h5 class="card-title">Pricing</h5>
+                <div class="row">
+                    <!-- Price input -->
+                    <div class="col-6">
+                        <label for="price-input" class="form-label">Price</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="ci-dollar"></i></span>
+                            <input class="form-control" type="text" id="price-input" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Compare input -->
+                    <div class="col-6">
+                        <label for="compare-input" class="form-label">Compare at price</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="ci-dollar"></i></span>
+                            <input class="form-control" type="text" id="compare-input" placeholder="0">
+                            <!-- Compare tooltips -->
+                            <span class="input-group-text" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                data-bs-html="true" title="To show reduced price,
+move the product's original
+price into Compare at price.
+Enter a lower value into Price."><i class="ci-idea"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body border-top">
+                <div class="row">
+                    <!-- Cost input -->
+                    <label for="cost-input" class="form-label">Cost per item</label>
+                    <div class="col-6">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="ci-dollar"></i></span>
+                            <input class="form-control" type="number" id="cost-input" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Margin span -->
+                    <div class="col-3">
+                        <p class="text-muted mb-0">Margin</p>
+                        <span>-</span>
+                    </div>
+                    <!-- Profit span -->
+                    <div class="col-3">
+                        <p class="text-muted mb-0">Profit</p>
+                        <span>-</span>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Card Inventory -->
