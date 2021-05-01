@@ -1,2 +1,2 @@
-A E-Commerce Webapp project
+A E-Commerce webapp project
 -
