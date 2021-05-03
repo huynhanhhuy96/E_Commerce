@@ -1,0 +1,12 @@
+D:\Dev\GitHub\E_Commerce\EC.Core\EC.Core\bin\Debug\net5.0\EC.Core.deps.json
+D:\Dev\GitHub\E_Commerce\EC.Core\EC.Core\bin\Debug\net5.0\EC.Core.dll
+D:\Dev\GitHub\E_Commerce\EC.Core\EC.Core\bin\Debug\net5.0\ref\EC.Core.dll
+D:\Dev\GitHub\E_Commerce\EC.Core\EC.Core\bin\Debug\net5.0\EC.Core.pdb
+D:\Dev\GitHub\E_Commerce\EC.Core\EC.Core\obj\Debug\net5.0\EC.Core.csprojAssemblyReference.cache
+D:\Dev\GitHub\E_Commerce\EC.Core\EC.Core\obj\Debug\net5.0\EC.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\GitHub\E_Commerce\EC.Core\EC.Core\obj\Debug\net5.0\EC.Core.AssemblyInfoInputs.cache
+D:\Dev\GitHub\E_Commerce\EC.Core\EC.Core\obj\Debug\net5.0\EC.Core.AssemblyInfo.cs
+D:\Dev\GitHub\E_Commerce\EC.Core\EC.Core\obj\Debug\net5.0\EC.Core.csproj.CoreCompileInputs.cache
+D:\Dev\GitHub\E_Commerce\EC.Core\EC.Core\obj\Debug\net5.0\EC.Core.dll
+D:\Dev\GitHub\E_Commerce\EC.Core\EC.Core\obj\Debug\net5.0\ref\EC.Core.dll
+D:\Dev\GitHub\E_Commerce\EC.Core\EC.Core\obj\Debug\net5.0\EC.Core.pdb
