@@ -2,7 +2,7 @@ namespace EC.Cross.NativeInjectorBootStrapper
 {
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.DependencyInjection;
-    using OS.Repo.Context;
+    using EC.Repo.Context;
     public class NativeInjectorBootStrapper
     {
         public static void RegisterServices(IServiceCollection services)

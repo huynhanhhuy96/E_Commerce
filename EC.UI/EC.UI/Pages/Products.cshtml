@@ -3,12 +3,43 @@
 @{
     ViewData["Title"] = "Add Products";
 }
+<!-- Dark navbar -->
+<header class="fixed-top navbar navbar-expand-lg navbar-dark bg-dark p-0">
+    <div class="container">
+        <!-- Navbar content -->
+        <h5 class="navbar-brand mb-0" style="color: #b5b7b9;">Unsaved product</h5>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div role="group" aria-label="Solid button group">
+            <!-- Light button -->
+            <button type="button" class="btn btn-outline-light">Discard</button>
+            <!-- Save button -->
+            <button asp-page-handler="Save" type="submit" class="btn btn-accent">Save</button>
+        </div>
+    </div>
+</header>
+<!-- Messege -->
+@if (!string.IsNullOrEmpty(Model.ThongBao))
+{
+    <div class="alert alert-success d-flex" role="alert">
+        <div class="alert-icon">
+            <i class="ci-check-circle"></i>
+        </div>
+        <div>
+            @Html.Raw(Model.ThongBao)<br />
+            <a href="#" class="alert-link">Add another product</a> or <a href="#" class="alert-link">view products with a
+                draft status</a>
+        </div>
+    </div>
+}
 <!-- Navbar -->
 <nav aria-label="Page navigation example">
     <ul class="pagination">
         <!-- Button Back-->
         <li class="page-item" style="padding: 1px;">
-            <a href="#" class="btn btn-secondary btn-icon" aria-label="Previous">
+            <a class="btn btn-secondary btn-icon" aria-label="Previous" asp-page="/Index">
                 <i class="ci-arrow-left"></i>
             </a>
         </li>
@@ -18,251 +49,264 @@
         </li>
     </ul>
 </nav>
-<!-- Row 8:4 -->
-<div class="row">
-    <!-- Colume 8 -->
-    <div class="col-8">
-        <!-- Card Main -->
-        <div class="card">
-            <div class="card-body">
-                <!-- Input Title -->
-                <div>
-                    <label for="title-input" class="form-label">Title</label>
-                    <input class="form-control" type="text" id="title-input" placeholder="Short sleeve t-shirt">
-                </div>
-                <!-- Textarea Description -->
-                <div class="mt-3">
-                    <label for="description-input" class="form-label">Description</label>
-                    <textarea class="form-control" type="text" id="description-input"></textarea>
-                </div>
-            </div>
-        </div>
-        <!-- Card Media -->
-        <div class="card mt-3">
-            <div class="card-body">
-                <h5 class="card-title">Media</h5>
-                <!-- Inputfiles Media -->
-                <div class="file-drop-area">
-                    <div class="file-drop-icon ci-cloud-upload"></div>
-                    <span class="file-drop-message">Drag and drop here to upload</span>
-                    <input type="file" class="file-drop-input">
-                    <button type="button" class="file-drop-btn btn btn-primary btn-sm">Or select file</button>
-                </div>
-            </div>
-        </div>
-        <!-- Card Pricing -->
-        <div class="card mt-3">
-            <div class="card-body">
-                <h5 class="card-title">Pricing</h5>
-                <div class="row">
-                    <!-- Price input -->
-                    <div class="col-6">
-                        <label for="price-input" class="form-label">Price</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="ci-dollar"></i></span>
-                            <input class="form-control" type="text" id="price-input" placeholder="0">
-                        </div>
+<!-- Form Post -->
+<form method="post">
+    <!-- Row 8:4 -->
+    <div class="row">
+        <!-- Colume 8 -->
+        <div class="col-8">
+            <!-- Card Main -->
+            <div class="card">
+                <div class="card-body">
+                    <!-- Input Title -->
+                    <div>
+                        <label for="title-input" class="form-label">Title</label>
+                        <input asp-for="Title" class="form-control" type="text" id="title-input"
+                            placeholder="Short sleeve t-shirt">
                     </div>
-                    <!-- Compare input -->
-                    <div class="col-6">
-                        <label for="compare-input" class="form-label">Compare at price</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="ci-dollar"></i></span>
-                            <input class="form-control" type="text" id="compare-input" placeholder="0">
-                            <!-- Compare tooltips -->
-                            <span class="input-group-text" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                data-bs-html="true" title="To show reduced price,
+                    <!-- Textarea Description -->
+                    <div class="mt-3">
+                        <label for="description-input" class="form-label">Description</label>
+                        <textarea class="form-control" type="text" id="description-input"></textarea>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Media -->
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">Media</h5>
+                    <!-- Inputfiles Media -->
+                    <div class="file-drop-area">
+                        <div class="file-drop-icon ci-cloud-upload"></div>
+                        <span class="file-drop-message">Drag and drop here to upload</span>
+                        <input type="file" class="file-drop-input">
+                        <button type="button" class="file-drop-btn btn btn-primary btn-sm">Or select file</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Pricing -->
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">Pricing</h5>
+                    <div class="row">
+                        <!-- Price input -->
+                        <div class="col-6">
+                            <label for="price-input" class="form-label">Price</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="ci-dollar"></i></span>
+                                <input class="form-control" type="text" id="price-input" placeholder="0">
+                            </div>
+                        </div>
+                        <!-- Compare input -->
+                        <div class="col-6">
+                            <label for="compare-input" class="form-label">Compare at price</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="ci-dollar"></i></span>
+                                <input class="form-control" type="text" id="compare-input" placeholder="0">
+                                <!-- Compare tooltips -->
+                                <span class="input-group-text" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                    data-bs-html="true" title="To show reduced price,
 move the product's original
 price into Compare at price.
 Enter a lower value into Price."><i class="ci-idea"></i></span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card-body border-top">
-                <div class="row">
-                    <!-- Cost input -->
-                    <label for="cost-input" class="form-label">Cost per item</label>
-                    <div class="col-6">
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="ci-dollar"></i></span>
-                            <input class="form-control" type="number" id="cost-input" placeholder="0">
+                <div class="card-body border-top">
+                    <div class="row">
+                        <!-- Cost input -->
+                        <label for="cost-input" class="form-label">Cost per item</label>
+                        <div class="col-6">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="ci-dollar"></i></span>
+                                <input class="form-control" type="number" id="cost-input" placeholder="0">
+                            </div>
+                        </div>
+                        <!-- Margin span -->
+                        <div class="col-3">
+                            <p class="text-muted mb-0">Margin</p>
+                            <span>-</span>
+                        </div>
+                        <!-- Profit span -->
+                        <div class="col-3">
+                            <p class="text-muted mb-0">Profit</p>
+                            <span>-</span>
                         </div>
                     </div>
-                    <!-- Margin span -->
-                    <div class="col-3">
-                        <p class="text-muted mb-0">Margin</p>
-                        <span>-</span>
-                    </div>
-                    <!-- Profit span -->
-                    <div class="col-3">
-                        <p class="text-muted mb-0">Profit</p>
-                        <span>-</span>
+                    <span class="text-muted">Customers won’t see this</span>
+                    <!-- Charge checkbox -->
+                    <div class="form-check mt-2">
+                        <input class="form-check-input" type="checkbox" id="charge-check" checked>
+                        <label class="form-check-label" for="charge-check">Charge tax on this product</label>
                     </div>
                 </div>
-                <span class="text-muted">Customers won’t see this</span>
-                <!-- Charge checkbox -->
-                <div class="form-check mt-2">
-                    <input class="form-check-input" type="checkbox" id="charge-check" checked>
-                    <label class="form-check-label" for="charge-check">Charge tax on this product</label>
+            </div>
+            <!-- Card Inventory -->
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">Inventory</h5>
+                    <div class="row">
+                        <!-- SKU input -->
+                        <div class="col-6">
+                            <label for="SKU-input" class="form-label">SKU (Stock Keeping Unit)</label>
+                            <input class="form-control" type="text" id="SKU-input" placeholder="0">
+                        </div>
+                        <!-- Barcode input -->
+                        <div class="col-6">
+                            <label for="barcode-input" class="form-label">Barcode (ISBN, UPC, GTIN, etc.)</label>
+                            <input class="form-control" type="text" id="barcode-input" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Track checkbox -->
+                    <div class="form-check mt-2">
+                        <input class="form-check-input" type="checkbox" id="track-check" checked>
+                        <label class="form-check-label" for="track-check">Track quantity</label>
+                    </div>
+                    <!-- Continue checkbox -->
+                    <div class="form-check mt-2">
+                        <input class="form-check-input" type="checkbox" id="continue-check">
+                        <label class="form-check-label" for="continue-check">Continue selling when out of stock</label>
+                    </div>
+                </div>
+                <div class="card-body border-top col-6">
+                    <p>QUANTITY</p>
+                    <!-- Available input -->
+                    <label for="available-input" class="form-label">Available</label>
+                    <input class="form-control" type="number" id="available-input" placeholder="0">
+                </div>
+            </div>
+            <!-- Card Shipping -->
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">Shipping</h5>
+                    <!-- Physical check -->
+                    <div class="form-check mt-2 mb-2">
+                        <input class="form-check-input" type="checkbox" id="physical-check" checked>
+                        <label class="form-check-label" for="physical-check">This is a physical product</label>
+                    </div>
+                </div>
+                <div class="card-body border-top">
+                    <p>WEIGHT</p>
+                    <p class="text-muted">Used to calculate shipping rates at checkout and label prices during
+                        fulfillment.
+                    </p>
+                    <div class="row">
+                        <!-- Weight -->
+                        <label for="weight-input" class="form-label">Available</label>
+                        <div class="col-4">
+                            <input class="form-control" type="text" id="weight-input" value="0.0">
+                        </div>
+                        <div class="col-2">
+                            <!-- Volume select -->
+                            <select class="form-select" id="volume_select" required>
+                                <option value="lb">lb</option>
+                                <option value="oz">oz</option>
+                                <option value="kg" selected>kg</option>
+                                <option value="g">g</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body border-top">
+                    <p class="mb-2">CUSTOMS INFORMATION</p>
+                    <p class="text-muted">Customs authorities use this information to calculate duties when shipping
+                        internationally. Shown on printed customs forms.</p>
+                    <!-- Country select -->
+                    <label for="country-select" class="form-label">Country/Region of origin</label>
+                    <select class="form-select" id="country-select">
+                        <option value="">Select country/region</option>
+                    </select>
+                    <p class="text-muted">In most cases, where the product is manufactured.</p>
+                    <!-- HS input -->
+                    <label for="hs-input" class="form-label">HS (Harmonized System) code</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="ci-search"></i></span>
+                        <input class="form-control" type="text" id="hs-input" placeholder="Search or enter a HS code">
+                    </div>
+                    <p class="text-muted mb-0">Manually enter codes that are longer than 6 numbers.</p>
+                </div>
+            </div>
+            <!-- Card Variants -->
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">Variants</h5>
+                    <!-- Variants check -->
+                    <div class="form-check mt-2 mb-2">
+                        <input class="form-check-input" type="checkbox" id="variants-check">
+                        <label class="form-check-label" for="variants-check">This product has multiple options, like
+                            different sizes or colors</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Search engine  -->
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">Search engine listing preview</h5>
+                    <p>Add a title and description to see how this product might appear in a search engine listing</p>
                 </div>
             </div>
         </div>
-        <!-- Card Inventory -->
-        <div class="card mt-3">
-            <div class="card-body">
-                <h5 class="card-title">Inventory</h5>
-                <div class="row">
-                    <!-- SKU input -->
-                    <div class="col-6">
-                        <label for="SKU-input" class="form-label">SKU (Stock Keeping Unit)</label>
-                        <input class="form-control" type="text" id="SKU-input" placeholder="0">
+        <!-- Colume 4 -->
+        <div class="col-4">
+            <!-- Card Product status -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Product status</h5>
+                    <!-- Status select -->
+                    <select class="form-select" id="status-select">
+                        <option value="active">Active</option>
+                        <option value="draft" selected>Draft</option>
+                    </select>
+                    <p class="text-muted mt-2 mb-0">This product will be hidden from all sales channels.</p>
+                </div>
+                <div class="card-body border-top">
+                    <p>SALES CHANNELS AND APPS</p>
+                    <!-- Channels check -->
+                    <div class="form-check mt-2 mb-2">
+                        <input class="form-check-input" type="checkbox" id="channels-check" checked>
+                        <label class="form-check-label" for="channels-check">Online Store</label>
                     </div>
-                    <!-- Barcode input -->
-                    <div class="col-6">
-                        <label for="barcode-input" class="form-label">Barcode (ISBN, UPC, GTIN, etc.)</label>
-                        <input class="form-control" type="text" id="barcode-input" placeholder="0">
+                    <!-- Link schedule -->
+                    <a href="#" class="ml-4">Schedule availability</a>
+                </div>
+            </div>
+            <!-- Card Organization -->
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">Organization</h5>
+                    <!-- Type input -->
+                    <label for="type-input" class="form-label">Product type</label>
+                    <input class="form-control" type="text" id="type-input" placeholder="e.g Shirts">
+                    <!-- Vendor input -->
+                    <label for="vendor-input" class="form-label mt-3">Vendor</label>
+                    <input class="form-control" type="text" id="vendor-input" placeholder="e.g Nike">
+                </div>
+                <div class="card-body border-top">
+                    <p>COLLECTIONS</p>
+                    <!-- Collections input -->
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="ci-search"></i></span>
+                        <input class="form-control" type="text" id="scollections-input"
+                            placeholder="Search for collections">
                     </div>
+                    <p class="text-muted mb-0 mt-2">Add this product to a collection so it’s easy to find in your store.
+                    </p>
                 </div>
-                <!-- Track checkbox -->
-                <div class="form-check mt-2">
-                    <input class="form-check-input" type="checkbox" id="track-check" checked>
-                    <label class="form-check-label" for="track-check">Track quantity</label>
+                <div class="card-body border-top">
+                    <p>TAGS</p>
+                    <!-- Tags input -->
+                    <input class="form-control" type="text" id="tags-input" placeholder="Vintage, cotton, summer">
                 </div>
-                <!-- Continue checkbox -->
-                <div class="form-check mt-2">
-                    <input class="form-check-input" type="checkbox" id="continue-check">
-                    <label class="form-check-label" for="continue-check">Continue selling when out of stock</label>
-                </div>
-            </div>
-            <div class="card-body border-top col-6">
-                <p>QUANTITY</p>
-                <!-- Available input -->
-                <label for="available-input" class="form-label">Available</label>
-                <input class="form-control" type="number" id="available-input" placeholder="0">
-            </div>
-        </div>
-        <!-- Card Shipping -->
-        <div class="card mt-3">
-            <div class="card-body">
-                <h5 class="card-title">Shipping</h5>
-                <!-- Physical check -->
-                <div class="form-check mt-2 mb-2">
-                    <input class="form-check-input" type="checkbox" id="physical-check" checked>
-                    <label class="form-check-label" for="physical-check">This is a physical product</label>
-                </div>
-            </div>
-            <div class="card-body border-top">
-                <p>WEIGHT</p>
-                <p class="text-muted">Used to calculate shipping rates at checkout and label prices during fulfillment.
-                </p>
-                <div class="row">
-                    <!-- Weight -->
-                    <label for="weight-input" class="form-label">Available</label>
-                    <div class="col-4">
-                        <input class="form-control" type="text" id="weight-input" value="0.0">
-                    </div>
-                    <div class="col-2">
-                        <!-- Volume select -->
-                        <select class="form-select" id="volume_select" required>
-                            <option value="lb">lb</option>
-                            <option value="oz">oz</option>
-                            <option value="kg" selected>kg</option>
-                            <option value="g">g</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body border-top">
-                <p class="mb-2">CUSTOMS INFORMATION</p>
-                <p class="text-muted">Customs authorities use this information to calculate duties when shipping
-                    internationally. Shown on printed customs forms.</p>
-                <!-- Country select -->
-                <label for="country-select" class="form-label">Country/Region of origin</label>
-                <select class="form-select" id="country-select" required>
-                    <option value="">Select country/region</option>
-                </select>
-                <p class="text-muted">In most cases, where the product is manufactured.</p>
-                <!-- HS input -->
-                <label for="hs-input" class="form-label">HS (Harmonized System) code</label>
-                <div class="input-group">
-                    <span class="input-group-text"><i class="ci-search"></i></span>
-                    <input class="form-control" type="text" id="hs-input" placeholder="Search or enter a HS code">
-                </div>
-                <p class="text-muted mb-0">Manually enter codes that are longer than 6 numbers.</p>
-            </div>
-        </div>
-        <!-- Card Variants -->
-        <div class="card mt-3">
-            <div class="card-body">
-                <h5 class="card-title">Variants</h5>
-                <!-- Variants check -->
-                <div class="form-check mt-2 mb-2">
-                    <input class="form-check-input" type="checkbox" id="variants-check">
-                    <label class="form-check-label" for="variants-check">This product has multiple options, like different sizes or colors</label>
-                </div>
-            </div>
-        </div>
-        <!-- Card Search engine  -->
-        <div class="card mt-3">
-            <div class="card-body">
-                <h5 class="card-title">Search engine listing preview</h5>
-                <p>Add a title and description to see how this product might appear in a search engine listing</p>
             </div>
         </div>
     </div>
-    <!-- Colume 4 -->
-    <div class="col-4">
-        <!-- Card Product status -->
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Product status</h5>
-                <!-- Status select -->
-                <select class="form-select" id="status-select" required>
-                    <option value="active">Active</option>
-                    <option value="draft" selected>Draft</option>
-                </select>
-                <p class="text-muted mt-2 mb-0">This product will be hidden from all sales channels.</p>
-            </div>
-            <div class="card-body border-top">
-                <p>SALES CHANNELS AND APPS</p>
-                <!-- Channels check -->
-                <div class="form-check mt-2 mb-2">
-                    <input class="form-check-input" type="checkbox" id="channels-check" checked>
-                    <label class="form-check-label" for="channels-check">Online Store</label>
-                </div>
-                <!-- Link schedule -->
-                <a href="#" class="ml-4">Schedule availability</a>
-            </div>
-        </div>
-        <!-- Card Organization -->
-        <div class="card mt-3">
-            <div class="card-body">
-                <h5 class="card-title">Organization</h5>
-                <!-- Type input -->
-                <label for="type-input" class="form-label">Product type</label>
-                <input class="form-control" type="text" id="type-input" placeholder="e.g Shirts">
-                <!-- Vendor input -->
-                <label for="vendor-input" class="form-label mt-3">Vendor</label>
-                <input class="form-control" type="text" id="vendor-input" placeholder="e.g Nike">
-            </div>
-            <div class="card-body border-top">
-                <p>COLLECTIONS</p>
-                <!-- Collections input -->
-                <div class="input-group">
-                    <span class="input-group-text"><i class="ci-search"></i></span>
-                    <input class="form-control" type="text" id="scollections-input" placeholder="Search for collections">
-                </div>
-                <p class="text-muted mb-0 mt-2">Add this product to a collection so it’s easy to find in your store.</p>
-            </div>
-            <div class="card-body border-top">
-                <p>TAGS</p>
-                <!-- Tags input -->
-                <input class="form-control" type="text" id="tags-input" placeholder="Vintage, cotton, summer">
-            </div>
-        </div>
+    <div class="border-top mt-2 pt-3" style="overflow: hidden; clear: both;">
+        <!-- Submit button -->
+        <button asp-page-handler="Save" type="submit" class="btn btn-accent btn-shadow"
+            style="float: right;">Save</button>
     </div>
-</div>
+</form>
 @section Scripts {
 <script src="~/js/tinymce.min.js" asp-append-version="true"></script>
 <script type="text/javascript">

@@ -16,7 +16,7 @@
 
 <body style="background-color: #f6f6f7;">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="fixed-top navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 p-0">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">EC.UI</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
@@ -40,14 +40,14 @@
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" style="padding-top: 70px; padding-bottom: 35px;">
             @RenderBody()
         </main>
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            Copyright Huy Huynh &copy; 2021
+        <div class="container pt-2 pb-2">
+            &copy; 2021 Copyright Huy Huynh ,Inc.
         </div>
     </footer>
 

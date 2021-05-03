@@ -4,14 +4,14 @@
     "D:\\Dev\\GitHub\\E_Commerce\\EC.UI\\EC.UI\\EC.UI.csproj": {}
   },
   "projects": {
-    "D:\\Dev\\GitHub\\E_Commerce\\EC.UI\\EC.UI\\EC.UI.csproj": {
+    "D:\\Dev\\GitHub\\E_Commerce\\EC.Core\\EC.Core\\EC.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\GitHub\\E_Commerce\\EC.UI\\EC.UI\\EC.UI.csproj",
-        "projectName": "EC.UI",
-        "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.UI\\EC.UI\\EC.UI.csproj",
+        "projectUniqueName": "D:\\Dev\\GitHub\\E_Commerce\\EC.Core\\EC.Core\\EC.Core.csproj",
+        "projectName": "EC.Core",
+        "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Core\\EC.Core\\EC.Core.csproj",
         "packagesPath": "C:\\Users\\rinng\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.UI\\EC.UI\\obj\\",
+        "outputPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Core\\EC.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rinng\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,350 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dev\\GitHub\\E_Commerce\\EC.Cross\\EC.Cross\\EC.Cross.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\GitHub\\E_Commerce\\EC.Cross\\EC.Cross\\EC.Cross.csproj",
+        "projectName": "EC.Cross",
+        "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Cross\\EC.Cross\\EC.Cross.csproj",
+        "packagesPath": "C:\\Users\\rinng\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Cross\\EC.Cross\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rinng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Dev\\GitHub\\E_Commerce\\EC.Repo\\EC.Repo\\EC.Repo.csproj": {
+                "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Repo\\EC.Repo\\EC.Repo.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dev\\GitHub\\E_Commerce\\EC.Repo\\EC.Repo\\EC.Repo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\GitHub\\E_Commerce\\EC.Repo\\EC.Repo\\EC.Repo.csproj",
+        "projectName": "EC.Repo",
+        "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Repo\\EC.Repo\\EC.Repo.csproj",
+        "packagesPath": "C:\\Users\\rinng\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Repo\\EC.Repo\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rinng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Dev\\GitHub\\E_Commerce\\EC.Core\\EC.Core\\EC.Core.csproj": {
+                "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Core\\EC.Core\\EC.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dev\\GitHub\\E_Commerce\\EC.Services\\EC.Contarct.Services\\EC.Contract.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\GitHub\\E_Commerce\\EC.Services\\EC.Contarct.Services\\EC.Contract.Services.csproj",
+        "projectName": "EC.Contract.Services",
+        "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Services\\EC.Contarct.Services\\EC.Contract.Services.csproj",
+        "packagesPath": "C:\\Users\\rinng\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Services\\EC.Contarct.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rinng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Dev\\GitHub\\E_Commerce\\EC.Core\\EC.Core\\EC.Core.csproj": {
+                "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Core\\EC.Core\\EC.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dev\\GitHub\\E_Commerce\\EC.Services\\EC.Services\\EC.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\GitHub\\E_Commerce\\EC.Services\\EC.Services\\EC.Services.csproj",
+        "projectName": "EC.Services",
+        "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Services\\EC.Services\\EC.Services.csproj",
+        "packagesPath": "C:\\Users\\rinng\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Services\\EC.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rinng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Dev\\GitHub\\E_Commerce\\EC.Core\\EC.Core\\EC.Core.csproj": {
+                "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Core\\EC.Core\\EC.Core.csproj"
+              },
+              "D:\\Dev\\GitHub\\E_Commerce\\EC.Repo\\EC.Repo\\EC.Repo.csproj": {
+                "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Repo\\EC.Repo\\EC.Repo.csproj"
+              },
+              "D:\\Dev\\GitHub\\E_Commerce\\EC.Services\\EC.Contarct.Services\\EC.Contract.Services.csproj": {
+                "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Services\\EC.Contarct.Services\\EC.Contract.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dev\\GitHub\\E_Commerce\\EC.UI\\EC.UI\\EC.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\GitHub\\E_Commerce\\EC.UI\\EC.UI\\EC.UI.csproj",
+        "projectName": "EC.UI",
+        "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.UI\\EC.UI\\EC.UI.csproj",
+        "packagesPath": "C:\\Users\\rinng\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.UI\\EC.UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rinng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Dev\\GitHub\\E_Commerce\\EC.Cross\\EC.Cross\\EC.Cross.csproj": {
+                "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Cross\\EC.Cross\\EC.Cross.csproj"
+              },
+              "D:\\Dev\\GitHub\\E_Commerce\\EC.Services\\EC.Contarct.Services\\EC.Contract.Services.csproj": {
+                "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Services\\EC.Contarct.Services\\EC.Contract.Services.csproj"
+              },
+              "D:\\Dev\\GitHub\\E_Commerce\\EC.Services\\EC.Services\\EC.Services.csproj": {
+                "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Services\\EC.Services\\EC.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

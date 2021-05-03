@@ -1481,6 +1481,31 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "EC.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/EC.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EC.Core.dll": {}
+        }
+      },
+      "EC.Repo/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "EC.Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.5",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.5"
+        },
+        "compile": {
+          "bin/placeholder/EC.Repo.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EC.Repo.dll": {}
+        }
       }
     }
   },
@@ -5693,10 +5718,21 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "EC.Core/1.0.0": {
+      "type": "project",
+      "path": "../../EC.Core/EC.Core/EC.Core.csproj",
+      "msbuildProject": "../../EC.Core/EC.Core/EC.Core.csproj"
+    },
+    "EC.Repo/1.0.0": {
+      "type": "project",
+      "path": "../../EC.Repo/EC.Repo/EC.Repo.csproj",
+      "msbuildProject": "../../EC.Repo/EC.Repo/EC.Repo.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "EC.Repo >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.5",
       "Microsoft.EntityFrameworkCore.Relational >= 5.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.5"
@@ -5728,7 +5764,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Dev\\GitHub\\E_Commerce\\EC.Repo\\EC.Repo\\EC.Repo.csproj": {
+              "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Repo\\EC.Repo\\EC.Repo.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "EC.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/EC.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EC.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "EC.Core/1.0.0": {
+      "type": "project",
+      "path": "../../EC.Core/EC.Core/EC.Core.csproj",
+      "msbuildProject": "../../EC.Core/EC.Core/EC.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "EC.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\rinng\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Dev\\GitHub\\E_Commerce\\EC.Core\\EC.Core\\EC.Core.csproj": {
+              "projectPath": "D:\\Dev\\GitHub\\E_Commerce\\EC.Core\\EC.Core\\EC.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

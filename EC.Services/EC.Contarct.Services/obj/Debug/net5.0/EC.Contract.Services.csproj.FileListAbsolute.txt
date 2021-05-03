@@ -1,0 +1,15 @@
+D:\Dev\GitHub\E_Commerce\EC.Services\EC.Contarct.Services\bin\Debug\net5.0\EC.Contract.Services.deps.json
+D:\Dev\GitHub\E_Commerce\EC.Services\EC.Contarct.Services\bin\Debug\net5.0\EC.Contract.Services.dll
+D:\Dev\GitHub\E_Commerce\EC.Services\EC.Contarct.Services\bin\Debug\net5.0\ref\EC.Contract.Services.dll
+D:\Dev\GitHub\E_Commerce\EC.Services\EC.Contarct.Services\bin\Debug\net5.0\EC.Contract.Services.pdb
+D:\Dev\GitHub\E_Commerce\EC.Services\EC.Contarct.Services\bin\Debug\net5.0\EC.Core.dll
+D:\Dev\GitHub\E_Commerce\EC.Services\EC.Contarct.Services\bin\Debug\net5.0\EC.Core.pdb
+D:\Dev\GitHub\E_Commerce\EC.Services\EC.Contarct.Services\obj\Debug\net5.0\EC.Contract.Services.csprojAssemblyReference.cache
+D:\Dev\GitHub\E_Commerce\EC.Services\EC.Contarct.Services\obj\Debug\net5.0\EC.Contract.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\GitHub\E_Commerce\EC.Services\EC.Contarct.Services\obj\Debug\net5.0\EC.Contract.Services.AssemblyInfoInputs.cache
+D:\Dev\GitHub\E_Commerce\EC.Services\EC.Contarct.Services\obj\Debug\net5.0\EC.Contract.Services.AssemblyInfo.cs
+D:\Dev\GitHub\E_Commerce\EC.Services\EC.Contarct.Services\obj\Debug\net5.0\EC.Contract.Services.csproj.CoreCompileInputs.cache
+D:\Dev\GitHub\E_Commerce\EC.Services\EC.Contarct.Services\obj\Debug\net5.0\EC.Contract.Services.csproj.CopyComplete
+D:\Dev\GitHub\E_Commerce\EC.Services\EC.Contarct.Services\obj\Debug\net5.0\EC.Contract.Services.dll
+D:\Dev\GitHub\E_Commerce\EC.Services\EC.Contarct.Services\obj\Debug\net5.0\ref\EC.Contract.Services.dll
+D:\Dev\GitHub\E_Commerce\EC.Services\EC.Contarct.Services\obj\Debug\net5.0\EC.Contract.Services.pdb

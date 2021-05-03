@@ -2,6 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EC.Cross.NativeInjectorBootStrapper;
+using EC.Repo.Context;
+using EC.Services;
+using EC.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,6 +27,10 @@ namespace EC.UI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            NativeInjectorBootStrapper.RegisterServices(services: services);
+
+            services.AddDbContext<ECContext>();
+            services.AddScoped<IProductServices, ProductServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

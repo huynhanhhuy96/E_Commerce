@@ -1,0 +1,17 @@
+D:\Dev\GitHub\E_Commerce\EC.Cross\EC.Cross\bin\Debug\net5.0\EC.Cross.deps.json
+D:\Dev\GitHub\E_Commerce\EC.Cross\EC.Cross\bin\Debug\net5.0\EC.Cross.dll
+D:\Dev\GitHub\E_Commerce\EC.Cross\EC.Cross\bin\Debug\net5.0\ref\EC.Cross.dll
+D:\Dev\GitHub\E_Commerce\EC.Cross\EC.Cross\bin\Debug\net5.0\EC.Cross.pdb
+D:\Dev\GitHub\E_Commerce\EC.Cross\EC.Cross\bin\Debug\net5.0\EC.Core.dll
+D:\Dev\GitHub\E_Commerce\EC.Cross\EC.Cross\bin\Debug\net5.0\EC.Repo.dll
+D:\Dev\GitHub\E_Commerce\EC.Cross\EC.Cross\bin\Debug\net5.0\EC.Repo.pdb
+D:\Dev\GitHub\E_Commerce\EC.Cross\EC.Cross\bin\Debug\net5.0\EC.Core.pdb
+D:\Dev\GitHub\E_Commerce\EC.Cross\EC.Cross\obj\Debug\net5.0\EC.Cross.csprojAssemblyReference.cache
+D:\Dev\GitHub\E_Commerce\EC.Cross\EC.Cross\obj\Debug\net5.0\EC.Cross.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\GitHub\E_Commerce\EC.Cross\EC.Cross\obj\Debug\net5.0\EC.Cross.AssemblyInfoInputs.cache
+D:\Dev\GitHub\E_Commerce\EC.Cross\EC.Cross\obj\Debug\net5.0\EC.Cross.AssemblyInfo.cs
+D:\Dev\GitHub\E_Commerce\EC.Cross\EC.Cross\obj\Debug\net5.0\EC.Cross.csproj.CoreCompileInputs.cache
+D:\Dev\GitHub\E_Commerce\EC.Cross\EC.Cross\obj\Debug\net5.0\EC.Cross.csproj.CopyComplete
+D:\Dev\GitHub\E_Commerce\EC.Cross\EC.Cross\obj\Debug\net5.0\EC.Cross.dll
+D:\Dev\GitHub\E_Commerce\EC.Cross\EC.Cross\obj\Debug\net5.0\ref\EC.Cross.dll
+D:\Dev\GitHub\E_Commerce\EC.Cross\EC.Cross\obj\Debug\net5.0\EC.Cross.pdb
