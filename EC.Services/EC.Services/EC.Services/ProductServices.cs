@@ -5,6 +5,7 @@ namespace EC.Services
     using EC.Repo.Context;
     using System.Linq;
     using EC.Services.Interfaces;
+    using System;
 
     public class ProductServices : IProductServices
     {
@@ -23,11 +24,17 @@ namespace EC.Services
 
             return true;
         }
-        
+
         public List<ProductEntity> GetProductEntities()
         {
-            List<ProductEntity> lstProducts = _context.Products.OrderBy(p=>p.Title).ToList();
-            return lstProducts;
+            List<ProductEntity> items = _context.Products.OrderBy(p => p.Title).ToList();
+            return items;
+        }
+
+        public ProductEntity GetProductEntitiesByID(Guid id)
+        {
+            ProductEntity item = _context.Products.Where(p=>p.Id==id).SingleOrDefault();
+            return item;
         }
     }
 }

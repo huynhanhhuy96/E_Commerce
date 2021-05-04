@@ -9,7 +9,7 @@ namespace EC.Repo
         public ECContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<ECContext>();
-            optionsBuilder.UseSqlServer(connectionString: "Server=.\\SQLEXPRESS;Database=EC;Trusted_Connection=True");
+            optionsBuilder.UseSqlServer(connectionString: "Server=.\\SQLEXPRESS;Database=E-Commerce;Trusted_Connection=True");
 
             return new ECContext(options: optionsBuilder.Options);
         }

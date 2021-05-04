@@ -8,7 +8,7 @@ namespace EC.Cross.NativeInjectorBootStrapper
         public static void RegisterServices(IServiceCollection services)
         {
             services.AddDbContext<ECContext>((DbContextOptionsBuilder options)=> options.UseSqlServer(
-                connectionString: "Server=.\\SQLEXPRESS;Database=EC;Trusted_Connection=True"
+                connectionString: "Server=.\\SQLEXPRESS;Database=E-Commerce;Trusted_Connection=True"
             ));
         }
     }

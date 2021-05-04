@@ -1,3 +1,5 @@
+using System;
+
 namespace EC.Core.Models
 {
     public class ProductEntity
@@ -6,7 +8,7 @@ namespace EC.Core.Models
         {
             this.Title = title;
         }
-        public string Id { get; set; }
+        public Guid Id { get; set; }
         public string Title { get; set; }
     }
 }

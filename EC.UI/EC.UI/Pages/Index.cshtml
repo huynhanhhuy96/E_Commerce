@@ -7,7 +7,7 @@
 <h4 class="ml-3 mt-2">@ViewData["Title"]</h4>
 <div class="card">
     <div class="card-body">
-        <table class='table'>
+        <table id="ClickableTable" class='table'>
             <thead class=''>
                 <tr>
                     <th>Id</th>
@@ -20,7 +20,10 @@
 
                     <tr>
                         <td>@item.Id</td>
-                        <td>@item.Title</td>
+                        @{
+                            var url = "/Products/" + item.Id;
+                        }
+                        <td><a href="@url">@item.Title</a></td>
                     </tr>
                 }
             </tbody>
